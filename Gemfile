@@ -31,7 +31,7 @@ gem 'rollbar'
 gem 'wor-paginate', '~> 0.1.8'
 
 # CORS support
-gem 'rack-cors', '~> 1.0.3', require: 'rack/cors'
+gem 'rack-cors', '~> 1.0.5', require: 'rack/cors'
 
 # Use for DoS attacks
 gem 'rack-attack'
