@@ -17,21 +17,15 @@
 development: &default
   adapter: postgresql
   encoding: unicode
-  database: rails-bootstrap_development
+  database: wolox-standard-pagination-development
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV.fetch('DB_USERNAME', 'rails-bootstrap') %>
-  password: <%= ENV.fetch('DB_PASSWORD', 'rails-bootstrap') %>
+  username: <%= ENV.fetch('DB_USERNAME') %>
+  password: <%= ENV.fetch('DB_PASSWORD') %>
   host: <%= ENV.fetch('DB_HOST', 'localhost') %>
   port: <%= ENV.fetch('DB_PORT', '5432') %>
 
 test: &test
   <<: *default
-  database: rails-bootstrap_test
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: <%= ENV['DATABASE_URL'] %>
+  database: wolox-standard-pagination_test
